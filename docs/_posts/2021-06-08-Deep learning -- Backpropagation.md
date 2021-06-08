@@ -96,3 +96,7 @@ $$
 & = \sigma (x) (1 - \sigma (x))
 \end{align}
 $$
+
+## Copyright
+
+This post is written by chryoung. You can copy/paste if you cite the source.
