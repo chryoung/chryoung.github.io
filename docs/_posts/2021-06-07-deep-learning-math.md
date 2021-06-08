@@ -6,7 +6,7 @@ mathjax: true
 
 ## Math basic
 
-### Discrete differential
+### Matrix Differential
 
 Let
 
