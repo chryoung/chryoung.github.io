@@ -168,3 +168,7 @@ np.array(a) # convert python array a to numpy array
 $$z = w^T x + b$$ is `z = np.dot(wT, x) + b` in numpy.
 
 Avoid using rank 1 array.
+
+## Copyright
+
+This post is written by chryoung. You can copy/paste if you cite the source.
