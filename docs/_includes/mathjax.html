@@ -1,7 +1,9 @@
 {% if page.mathjax %}
 <script>
   window.MathJax = {
+    loader: {load: ['[tex]/ams']},
     tex: {
+      packages: {'[+]': ['ams']},
       inlineMath: [['$', '$'], ['\\(', '\\)']]
     }
   };

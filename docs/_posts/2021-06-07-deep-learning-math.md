@@ -47,7 +47,7 @@ $$
 L = -y\log{\hat{y}} - (1 - y)\log{(1 - \hat{y})}
 $$
 
-The goal of the machine learnign is to minimize the loss function $L$.
+The goal of the machine learning is to minimize the loss function $L$.
 
 #### The deduction of cross entropy
 
@@ -115,7 +115,10 @@ $$
 
 Definition: Make $\hat{y}$ close to $y$ using the gradient.
 
-![Backward propagation](/assets/deep-learning/back-propagation.svg)
+<p align="center">
+  <img alt="Backward propagation" src="/assets/deep-learning/back-propagation-render.svg" />
+</p>
+
 
 Steps of backward propagation:
 

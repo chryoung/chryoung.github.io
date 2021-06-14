@@ -10,6 +10,7 @@ mathjax: true
 To do the backpropagation, we need the partial derivates of the loss function to minimize it.
 
 Here is the definition of the cross entropy loss function $L$:
+
 $$
 L = -y \log \hat{y}  - (1 - y) \log (1 - \hat{y})
 $$
@@ -62,6 +63,7 @@ $$
 ## The Derivative of Sigmoid Function
 
 Definition[^1]:
+
 $$
 \sigma(x) = \frac{1}{1 + e^{-x}}
 $$
