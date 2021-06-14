@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Build your blog on github.io using Hexo
+tags: hexo blog
 ---
 
 ## What is Hexo

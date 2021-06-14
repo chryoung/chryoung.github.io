@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Deep learning -- Math
+title: Deep Learning -- Math
+tags: deep-learning math
 mathjax: true
 ---
 
@@ -119,8 +120,8 @@ Definition: Make $\hat{y}$ close to $y$ using the gradient.
 Steps of backward propagation:
 
 1. Forward-propagation: calculate the value of loss $L$
-2. Backward-propagation: calculate the gradient of the loss $L$
-3. Update the parameter using the gradient
+2. Backward-propagation: calculate the gradient of the loss $L$ with respect to parameters
+3. Update the parameters using the gradient from step2
 
 ### Matrix Multiplication
 
@@ -148,13 +149,13 @@ The number of rows is equal to the one of the left matrix, while the number of c
 
 ### Data cleaning
 
-**Centralize:** Subtract the average of the samples from every sample.  e.g. If there are samples $s_1, s_2, ..., s_n$, and their average is $a$, then the centralized data is $\frac{s_1}{a}, \frac{s_2}{a}, ..., \frac{s_n}{a}$.
+**Centralize:** Subtract the average of the samples from every sample.  e.g. If there are samples $s_1, s_2, ..., s_n$, and their average is $a$, then the centralized data is $s_1 - a, s_2 - a, ..., s_n - a$.
 
 Steps for cleaning the new data:
 
 1. Figure out the shape and the dimension of the data
-2. reshape
-3. standardize
+2. Reshape
+3. Standardize
 
 ## Numpy Functions
 

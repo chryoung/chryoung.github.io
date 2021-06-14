@@ -24,8 +24,17 @@ layout: default
             {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       {%- endif -%}</p>
+    <ul class="tags">
+      {%- for tag in page.tags -%}
+        <li><a href="/tags#{{tag}}">{{ tag }}</a></li>
+      {%- endfor -%}
+    </ul>
   </header>
 
+  <div class="toc">
+    <h2>Table of Contents</h2>
+    {% include toc.html html=content %}
+  </div>
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>

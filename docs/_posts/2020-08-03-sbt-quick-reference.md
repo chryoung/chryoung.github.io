@@ -1,6 +1,7 @@
 ---
 layout: post
 title: sbt Quick Reference
+tags: scala
 ---
 
 ## sbt version
