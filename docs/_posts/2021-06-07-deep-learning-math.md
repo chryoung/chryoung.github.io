@@ -2,7 +2,7 @@
 layout: post
 title: Deep Learning -- Math
 tags: deep-learning math
-mathjax: true
+math: true
 ---
 
 ## Math basic
@@ -12,31 +12,31 @@ mathjax: true
 Let
 
 $$
-\begin{align}
+\begin{align*}
 dz^{(i)} & = a^{(i)} - y^{(i)} \\
 dz & = A - Y = [a^{(i)} - y^{(i)}]
-\end{align}
+\end{align*}
 $$
 
 Since
 
 $$
-\begin{align}
+\begin{align*}
 z  & = w^T + b \\
 A  & = \sigma(z) \\
 dz & = A - Y\\
 dw & = \frac{1}{m}xdz^T \\
 db & = \frac{1}{m}\sum{dz} \\
-\end{align}
+\end{align*}
 $$
 
 we can know that
 
 $$
-\begin{align}
+\begin{align*}
 w & := w - \alpha dw \\
 b & := b - \alpha db
-\end{align}
+\end{align*}
 $$
 
 ### Loss function
@@ -54,10 +54,10 @@ The goal of the machine learning is to minimize the loss function $L$.
 We need a conditional probability function $P$ of $x, y$. And $P$ should satisfy
 
 $$
-\begin{align}
+\begin{align*}
 P(y|x) & = \hat{y} & y = 1 \\
 P(y|x) & = 1 - \hat{y} & y = 0
-\end{align}
+\end{align*}
 $$
 
 We can see that this function
@@ -91,10 +91,10 @@ $$
 Let $A = \sigma(w^TX +b)$, its partial derivative is
 
 $$
-\begin{align}
+\begin{align*}
 \frac{\partial J}{\partial w} & = \frac{1}{m} X (A - Y)^T \\
 \frac{\partial J}{\partial b} & = \frac{1}{m} \sum_{(i = 1)}^m (a^{(i)} - y^{(i)})
-\end{align}
+\end{align*}
 $$
 
 #### L1 Loss, L2 Loss

@@ -2,7 +2,7 @@
 layout: post
 title: Deep Learning -- Math for Backpropagation
 tags: deep-learning math
-mathjax: true
+math: true
 ---
 
 ## The Partial Derivates of the Cross Entropy Loss Function
@@ -18,46 +18,46 @@ $$
 Let $\hat{y} = a = wx + b$, there is
 
 $$
-\begin{align}
+\begin{align*}
 \frac{\partial L}{\partial \hat{y}} & = - \frac{y}{\hat{y}} + \frac{1 - y}{1 - \hat{y}} \\
 \frac{\partial \hat{y}}{\partial w} & = x \\
 \frac{\partial\hat{y}}{\partial b} & = 1
-\end{align}
+\end{align*}
 $$
 
 So we can know that the partial derivative of $L$ with respect to $w$ is
 
 $$
-\begin{align}
+\begin{align*}
 \frac{\partial{L}}{\partial{w}} & = \frac{\partial L}{\partial \hat{y}} \frac{\partial \hat{y}}{\partial w} \\
 & = \left( - \frac{y}{\hat{y}} + \frac{1 - y}{1 - \hat{y}} \right) x \\
 & = -\frac{xy}{\hat{y}} + \frac{x(1 - y)}{1 - \hat{y}}
-\end{align}
+\end{align*}
 $$
 
 and the partial derivative of $L$ with respect to $b$ is
 
 $$
-\begin{align}
+\begin{align*}
 \frac{\partial{L}}{\partial{b}} & = \frac{\partial L}{\partial \hat{y}} \frac{\partial \hat{y}}{\partial b}\\
 & = - \frac{y}{\hat{y}} + \frac{1 - y}{1 - \hat{y}} \\
 & = \frac{\hat{y}-y\hat{y} - y + y\hat{y}}{(1-\hat{y})\hat{y}} \\
 & = \frac{\hat{y} - y}{\hat{y} - \hat{y}^2} \\
 & = \frac{1}{1- \hat{y}} - \frac{y}{\hat{y}(1 - \hat{y})}
-\end{align}
+\end{align*}
 $$
 
 and the partial derivative of $L$ with respect to $z$ is
 
 $$
-\begin{align}
+\begin{align*}
 \frac{\partial{L}}{\partial{z}} & = \frac{\partial L}{\partial a} \frac{\partial a}{\partial z} \\
 & = \left(-\frac{y}{a} + \frac{1 - y}{1 - a} \right) \left( \frac{1}{1 + e^{-z}} \right)' \\
 & = \left(-\frac{y}{a} + \frac{1 - y}{1 - a} \right)  (a (1 - a)) \\
 & = -y ( 1 - a) + a (1 - y) \\
 & = -y + ay + a - ay \\
 & = a - y
-\end{align}
+\end{align*}
 $$
 
 ## The Derivative of Sigmoid Function
@@ -77,12 +77,12 @@ $$
 then
 
 $$
-\begin{align}
+\begin{align*}
 f'(x) & = -e^{-x} = \frac{d\left[ \frac{1}{\sigma(x)} \right]}{dx} \\
 & = [\sigma(x)^{-1}]' \\
 & = -\sigma(x)^{-2} \sigma ' (x) \\
 & = - \frac{\sigma '(x)}{\sigma (x)^2}
-\end{align}
+\end{align*}
 $$
 
 Since
@@ -94,11 +94,11 @@ $$
 there is
 
 $$
-\begin{align}
+\begin{align*}
 - \frac{\sigma '(x)}{\sigma (x)^2} & = \frac{\sigma (x) - 1}{\sigma (x)} \\
 \sigma' (x) & = \frac{1 - \sigma(x)}{\sigma (x)} \sigma (x)^2 \\
 & = \sigma (x) (1 - \sigma (x))
-\end{align}
+\end{align*}
 $$
 
 ## Copyright

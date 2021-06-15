@@ -1,7 +1,7 @@
 ---
 title: Deep Learning -- Layers and Activation Functions
 tags: deep-learning
-mathjax: true
+math: true
 ---
 
 ## Notation
@@ -32,11 +32,11 @@ _The reason the hidden layer got its name is that you should not see the value o
 #### Single Training Set
 
 $$
-\begin{align}
+\begin{align*}
 z & = W \bar{x} + b \\
 
 \hat{y} & = a = \sigma(z)
-\end{align}
+\end{align*}
 $$
 
 where
@@ -52,7 +52,7 @@ where
 Take a matrix  $M$ of $(4,3)$ and vector $\bar{x}$ of $(3,1)$ for example
 
 $$
-\begin{align}
+\begin{align*}
 \begin{bmatrix}
 w_{1,1}^{[1]} w_{1,2}^{[1]} w_{1,3}^{[1]} \\
 w_{2,1}^{[1]} w_{2,2}^{[1]} w_{2,3}^{[1]} \\
@@ -78,7 +78,7 @@ z_2 \\
 z_3 \\
 z_4 \\
 \end{bmatrix}
-\end{align}
+\end{align*}
 $$
 
 #### Vectorization for Multiple Training Set
@@ -86,7 +86,7 @@ $$
 For multiple training sets, we can let the matrix $X$ be
 
 $$
-\begin{align}
+\begin{align*}
 X & = [ \bar{x}^{(1)}, \bar{x}^{(2)}, \ldots, \bar{x}^{(n)} ] \\
 & =
 \begin{bmatrix}
@@ -95,25 +95,25 @@ x_2^{(1)} x_2^{(2)} \ldots x_2^{(n)} \\
 \vdots \\
 x_n^{(1)} x_n^{(2)} \ldots x_n^{(n)} \\
 \end{bmatrix}
-\end{align}
+\end{align*}
 $$
 
 Then for the 1st layer there is
 
 $$
-\begin{align}
+\begin{align*}
 Z^{[1]} & = W^{[1]}X + b^{[1]} \\
 A^{[1]} & = \sigma(Z^{[1]}) \\
-\end{align}
+\end{align*}
 $$
 
 And the 2nd layer there is
 
 $$
-\begin{align}
+\begin{align*}
 Z^{[2]} & = W^{[2]}A^{[1]} + b^{[2]} \\
 A^{[2]} & = \sigma(Z^{[2]}) \\
-\end{align}
+\end{align*}
 $$
 
 ## Activation Functions
@@ -121,10 +121,10 @@ $$
 #### tanh
 
 $$
-\begin{align}
+\begin{align*}
 \tanh(z) & = \frac{e^z - e^{-z}}{e^z + e^{-z}} \\
 \tanh'(z) & = \left[ \frac{e^z - e^{-z}}{e^z + e^{-z}} \right]' = 1 - [\tanh(z)]^2
-\end{align}
+\end{align*}
 $$
 
 <p align="center">
@@ -136,10 +136,10 @@ $tanh$ is preferred in the hidden layer.
 #### Sigmoid
 
 $$
-\begin{align}
+\begin{align*}
 \sigma(z) & = \frac{1}{1 + e^{-z}} \\
 \sigma '(z) & = \sigma(z) (1 - \sigma(z))
-\end{align}
+\end{align*}
 $$
 
 <p align="center">
@@ -151,7 +151,7 @@ Sigmoid is preferred in the output layer.
 #### ReLu
 
 $$
-\begin{align}
+\begin{align*}
 g(z) & = \max(0, z) \\
 g'(z) & =
     \begin{cases}
@@ -159,7 +159,7 @@ g'(z) & =
         1, & \text{if}\ z > 0 \\
         \text{undef}, & \text{if}\ z = 0 \\
     \end{cases}
-\end{align}
+\end{align*}
 $$
 
 <p align="center">
@@ -171,14 +171,14 @@ On the origin $(0, 0) $, $g(z)$ is not differentiable nor derivable.
 #### Leaky ReLu
 
 $$
-\begin{align}
+\begin{align*}
 g(z) & = \max(0.01z, z) \\
 g'(z) & =
 	\begin{cases}
 		0.01, & \text{if}\ z < 0 \\
 		1, & \text{if}\ z \ge 0
 	\end{cases}
-\end{align}
+\end{align*}
 $$
 
 <p align="center">
