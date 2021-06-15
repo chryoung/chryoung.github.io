@@ -4,7 +4,7 @@ tags: deep-learning
 mathjax: true
 ---
 
-## Notions
+## Notation
 
 $$
 a^{[1](2)}
