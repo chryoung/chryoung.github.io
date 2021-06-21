@@ -7,38 +7,6 @@ math: true
 
 ## Math basic
 
-### Matrix Differential
-
-Let
-
-$$
-\begin{align*}
-dz^{(i)} & = a^{(i)} - y^{(i)} \\
-dz & = A - Y = [a^{(i)} - y^{(i)}]
-\end{align*}
-$$
-
-Since
-
-$$
-\begin{align*}
-z  & = w^T + b \\
-A  & = \sigma(z) \\
-dz & = A - Y\\
-dw & = \frac{1}{m}xdz^T \\
-db & = \frac{1}{m}\sum{dz} \\
-\end{align*}
-$$
-
-we can know that
-
-$$
-\begin{align*}
-w & := w - \alpha dw \\
-b & := b - \alpha db
-\end{align*}
-$$
-
 ### Loss function
 
 #### Cross entropy loss function
