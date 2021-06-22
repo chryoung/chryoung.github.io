@@ -84,7 +84,7 @@ $$
 Definition: Make $\hat{y}$ close to $y$ using the gradient.
 
 <p align="center">
-  <img alt="Backward propagation" src="/assets/deep-learning/back-propagation-render.svg" />
+  <img alt="Backward propagation" src="{% link /assets/deep-learning/back-propagation-render.svg %}" />
 </p>
 
 

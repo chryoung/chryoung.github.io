@@ -25,7 +25,7 @@ _The reason the hidden layer got its name is that you should not see the value o
 ### Illustration
 
 <p align="center">
-  <img alt="Fully connected layers illustration" src="/assets/deep-learning/fully-connected-layers-render.svg" />
+  <img alt="Fully connected layers illustration" src="{% link /assets/deep-learning/fully-connected-layers-render.svg %}" />
 </p>
 ### Equation
 
@@ -81,6 +81,17 @@ z_4 \\
 \end{align*}
 $$
 
+$$
+\hat{y} = a = \sigma \left(
+\begin{bmatrix}
+z_1 \\
+z_2 \\
+z_3 \\
+z_4
+\end{bmatrix}
+\right)
+$$
+
 #### Vectorization for Multiple Training Set
 
 For multiple training sets, we can let the matrix $X$ be
@@ -128,7 +139,7 @@ $$
 $$
 
 <p align="center">
-  <img alt="tanh" src="/assets/deep-learning/tanh.svg" />
+  <img alt="tanh" src="{% link /assets/deep-learning/tanh.svg %}" />
 </p>
 
 $tanh$ is preferred in the hidden layer.
@@ -143,7 +154,7 @@ $$
 $$
 
 <p align="center">
-  <img alt="Sigmoid" src="/assets/deep-learning/sigmoid.svg" />
+  <img alt="Sigmoid" src="{% link /assets/deep-learning/sigmoid.svg %}" />
 </p>
 
 Sigmoid is preferred in the output layer.
@@ -163,7 +174,7 @@ g'(z) & =
 $$
 
 <p align="center">
-  <img alt="ReLu" src="/assets/deep-learning/relu.svg" />
+  <img alt="ReLu" src="{% link /assets/deep-learning/relu.svg %}" />
 </p>
 
 On the origin $(0, 0) $, $g(z)$ is not differentiable nor derivable.
@@ -182,7 +193,7 @@ g'(z) & =
 $$
 
 <p align="center">
-  <img alt="Leaky ReLu" src="/assets/deep-learning/leaky_relu.svg" />
+  <img alt="Leaky ReLu" src="{% link /assets/deep-learning/leaky_relu.svg %}" />
 </p>
 
 #### Why Activation Function is Needed
