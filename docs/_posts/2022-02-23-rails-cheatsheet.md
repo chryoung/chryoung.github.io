@@ -56,6 +56,8 @@ rails generate model MyModel field1:integer field2:references
 rails generate migration AddAuthorToArticle author:references
 ```
 
+> The table which belongs to another will possess the _id column. i.e. `add_reference :table_which_belongs_to, :table_to_which_is_belonged`.
+
 ### Database operation
 
 ```bash
