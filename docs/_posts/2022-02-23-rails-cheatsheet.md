@@ -26,6 +26,9 @@ rails generate scaffold Article word_count:integer content:text
 
 # Generate model, controller, migration for a RESTful API
 rails generate scaffold_controller Article word_count:integer content:text
+
+# Destroy scaffold
+rails destroy scaffold Article
 ```
 
 ## Model and Migration
@@ -66,4 +69,11 @@ rails db:migrate
 
 # Rollback last migrate
 rails db:rollback
+```
+
+### Routes
+
+```bash
+# Show routes
+rails routes
 ```
