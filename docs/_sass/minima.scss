@@ -49,3 +49,7 @@ $on-laptop:        800px !default;
   "minima/layout",
   "minima/syntax-highlighting"
 ;
+
+pre, code {
+  font-family: Consolas, Menlo, monospace;
+}
