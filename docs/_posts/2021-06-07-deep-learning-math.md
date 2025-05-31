@@ -19,7 +19,7 @@ The goal of the machine learning is to minimize the loss function $L$.
 
 #### The deduction of cross entropy
 
-We need a conditional probability function $P$ of $x, y$. And $P$ should satisfy
+We need a conditional probability function $P$ of $x, y$. And $P$ should satisfies
 
 $$
 \begin{align*}
@@ -44,9 +44,9 @@ which is the cross entropy.
 
 #### The feature of the cross entropy
 
-When $y = 1$, if $L$ gets less, $-\log{\hat{y}}$ gets less too, while $\log{\hat{y}}$ gets greater. So that $\hat{y} < 1$. Because the $\log$ is applied to $\hat{y}$, when $\log{\hat{y}}$ is close to $\infty$, $\hat{y}$ is close to 1.
+When $y \rightarrow 1$, if $L$ gets less, $-\log{\hat{y}}$ gets less too, while $\log{\hat{y}}$ gets greater. So that $\hat{y} < 1$. Because the $\log$ is applied to $\hat{y}$, when $\log{\hat{y}}$ is close to $\infty$, $\hat{y}$ is close to 1.
 
-When $y = 0$, and $\log{(1 - \hat{y})}$ is close to $- \infty$, $\hat{y}$ is close to 0.
+When $y \rightarrow 0$, and $\log{(1 - \hat{y})}$ is close to $- \infty$, $\hat{y}$ is close to 0.
 
 Our goal is to let $\hat{y} \to y$. Because minimizing $L$ will make $\hat{y} \to y$.
 
