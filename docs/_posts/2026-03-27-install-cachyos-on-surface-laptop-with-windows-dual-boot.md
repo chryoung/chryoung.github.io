@@ -137,4 +137,4 @@ Pro-Tip: There is a pacman hook of sbctl which signs the imagine every time the 
 
 ## Disclaimer
 
-Portions of this content were generated using AI technology. All information has been verified for accuracy and refined by our editorial team prior to publication.
+This article is written with the help of AI.
