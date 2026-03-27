@@ -3,11 +3,13 @@ title: Install CachyOS on Surface Laptop with Window Dual Boot
 tags: os dual-boot
 ---
 
-Dual-booting a Surface device is a battle against Microsoft’s firmware locking. If you follow a standard guide, you'll end up in an endless UEFI boot loop. After days of "suffer-testing," here is the definitive "Golden Path" to getting CachyOS running alongside Windows 11 with Secure Boot Enabled.
-
 ## Disclaimer
 
 This article is written with the help of AI. Some steps will wipe your data entirely. Please backup your data before proceeding. The author will not be responsible for any data loss.
+
+## Introduction
+
+Dual-booting a Surface device is a battle against Microsoft’s firmware locking. If you follow a standard guide, you'll end up in an endless UEFI boot loop. After days of "suffer-testing," here is the definitive "Golden Path" to getting CachyOS running alongside Windows 11 with Secure Boot Enabled.
 
 ## 1. The Prerequisites (The "Clean Slate" Strategy)
 
