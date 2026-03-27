@@ -60,7 +60,7 @@ Before moving to the Linux installation:
 
 If your Surface is managed by your organization (Intune/Company Portal), do not enroll the device until after your CachyOS installation is finished and stable. Enrolling too early may force-enable BitLocker and lock your partition table.
 
-# 2. The Installation
+## 2. The Installation
 
 * OS: CachyOS (Arch-based).
 * Filesystem: ext4 for the root partition (Avoid BTRFS subvolumes to simplify the bootloader path).
@@ -69,7 +69,7 @@ If your Surface is managed by your organization (Intune/Company Portal), do not 
   * Linux Root -> /
   * Must: **8GB** FAT32 partition for /boot.
 
-# 3. Installing the Linux-Surface Kernel
+## 3. Installing the Linux-Surface Kernel
 
 Standard kernels lack touch/keyboard drivers for Surface. We need the community kernel.
 Add the Repository:
@@ -92,7 +92,7 @@ sudo pacman -S linux-surface linux-surface-headers iptsd
 
 (Note: Skip the linux-surface-secureboot-mok package. We are using the superior sbctl method.)
 
-# 4. Mastering Secure Boot with sbctl
+## 4. Mastering Secure Boot with sbctl
 
 Instead of using a clunky Microsoft-signed "Shim," we are taking ownership of the motherboard's keys.
 
@@ -112,7 +112,7 @@ sudo sbctl sign -s /boot/vmlinuz-linux-cachyos
 sudo sbctl sign -s /boot/efi/EFI/cachyos/grubx64.efi
 ```
 
-# 5. The "Anti-Lock" GRUB Trick (Crucial)
+## 5. The "Anti-Lock" GRUB Trick (Crucial)
 
 Surface firmware has a "Shim Lock" policy that triggers a rescue mode if you use custom keys with standard GRUB. You must reinstall GRUB with this flag:
 
@@ -128,13 +128,13 @@ sudo sbctl sign-all
 
 * Why? This tells GRUB to trust your hardware's sbctl keys instead of looking for a Microsoft "Shim" middleman.
 
-# 6. Verification
+## 6. Verification
 
 Re-enable Secure Boot in the UEFI. It should show as "Enabled (Custom)".
 
 * Result: Windows 11 boots. CachyOS boots with full touch/keyboard support. Intune sees Secure Boot is "On." Sanity restored.
 Pro-Tip: There is a pacman hook of sbctl which signs the imagine every time the kernel is updated. You don't have to run `sudo sbctl sign-all` every time.
 
-# Disclaimer
+## Disclaimer
 
 Portions of this content were generated using AI technology. All information has been verified for accuracy and refined by our editorial team prior to publication.
